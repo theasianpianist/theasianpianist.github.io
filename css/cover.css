@@ -139,7 +139,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: static;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -160,4 +160,9 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+.panel-body{
+  text-shadow: none;
+  text-align: left;
+  color: #333;
 }
