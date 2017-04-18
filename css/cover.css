@@ -167,5 +167,8 @@ body {
   color: #333;
 }
 .page-content{
-  margin-top: 30%;
+  margin-top: 50%;
+}
+.panel{
+  opacity: 0;
 }
