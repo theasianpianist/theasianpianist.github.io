@@ -186,7 +186,21 @@ body {
     from {opacity: 1;}
     to {opacity: 0;}
 }
+.auto-resizable-iframe {
+  max-width: 420px;
+  margin: 0px auto;
+}
 
-iframe {
+.auto-resizable-iframe > div {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0px;
+}
+
+.auto-resizable-iframe iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
+  height: 100%;
 }
