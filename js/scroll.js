@@ -5,3 +5,5 @@ $(document).ready(function(){
         $(".table").css("opacity", $(window).scrollTop() /100);
     });
 });
+
+$('.collapse').collapse()
