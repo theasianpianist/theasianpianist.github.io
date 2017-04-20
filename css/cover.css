@@ -212,3 +212,13 @@ iframe {
   color: #333;
   text-shadow: none;
 }
+tr:hover {
+  background-color: #444;
+}
+.expandable{
+    transition: all 0.25s ease;  
+}
+.expand{
+  transform: rotate(-90deg);
+}
+

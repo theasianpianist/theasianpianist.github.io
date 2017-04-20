@@ -6,3 +6,7 @@ $(document).ready(function(){
         $(".down-container").css("opacity", 1 - $(window).scrollTop() / 100);
     });
 });
+
+$( ".expandable" ).click(function() {
+    $(this).toggleClass("expand");
+});
