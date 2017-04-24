@@ -10,3 +10,9 @@ $(document).ready(function(){
 $( ".expandable" ).click(function() {
     $(this).toggleClass("expand");
 });
+
+$(".down").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".main").offset().top},
+        'slow');
+});
