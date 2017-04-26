@@ -27,7 +27,13 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  /*background-color: #333;*/
+  background-image: url("../img/background.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   color: #fff;
@@ -108,10 +114,10 @@ body {
 /*
  * Cover
  */
-
+/*
 .cover {
   padding: 0 20px;
-}
+}*/
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
@@ -168,10 +174,12 @@ body {
 }
 .page-content{
   margin-top: 40%;
+  min-height: 100%;
+  height: 100vh;
 }
-.table{
+/*.table{
   margin-top: 10%;
-}
+}*/
 .down {
   animation-name: breathe;
   animation-duration: 1.25s;
@@ -208,8 +216,8 @@ iframe {
   color: #333;
   text-shadow: none;
 }
-tr:hover {
-  background-color: #444;
+table.table > tbody > tr:hover {
+  background-color: rgba(255, 255, 255, .6);
 }
 .expandable{
     transition: all 0.25s ease;  
@@ -218,6 +226,15 @@ tr:hover {
   transform: rotate(-90deg);
 }
 .main{
-  margin-top: 20vh;
+  /*margin-top: 20vh;*/
 }
-
+/*.parallax {
+  background-image: url("../img/background.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: auto;
+  margin-left: auto;
+}*/
