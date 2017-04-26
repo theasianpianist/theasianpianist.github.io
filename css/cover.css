@@ -169,12 +169,8 @@ body {
 .page-content{
   margin-top: 40%;
 }
-.panel{
-  opacity: 0;
-}
 .table{
-  opacity: 0;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .down {
   animation-name: breathe;
@@ -220,5 +216,8 @@ tr:hover {
 }
 .expand{
   transform: rotate(-90deg);
+}
+.main{
+  margin-top: 20vh;
 }
 
