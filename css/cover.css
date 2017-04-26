@@ -173,9 +173,8 @@ body {
   color: #333;
 }
 .page-content{
-  margin-top: 40%;
-  min-height: 100%;
-  height: 100vh;
+  margin-top: 35vh;
+  height: 65vh;
 }
 /*.table{
   margin-top: 10%;
@@ -238,3 +237,7 @@ table.table > tbody > tr:hover {
   margin-right: auto;
   margin-left: auto;
 }*/
+.panel,
+.table {
+  opacity: 0;
+}
