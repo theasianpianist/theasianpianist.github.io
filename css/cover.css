@@ -217,6 +217,8 @@ iframe {
 }
 table.table > tbody > tr:hover {
   background-color: rgba(255, 255, 255, .6);
+  cursor: pointer;
+  text-decoration: underline;
 }
 .expandable{
     transition: all 0.25s ease;  
@@ -240,4 +242,7 @@ table.table > tbody > tr:hover {
 .panel,
 .table {
   opacity: 0;
+}
+.panel {
+  font-size: 18px;
 }
