@@ -9,6 +9,10 @@ a:hover {
   color: #333;
 }
 
+* {
+  font-family: Georgia;
+}
+
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -19,6 +23,10 @@ a:hover {
   border: 1px solid #fff;
 }
 
+.cover {
+  font-weight: bold;
+}
+
 
 /*
  * Base structure
@@ -26,14 +34,46 @@ a:hover {
 
 html,
 body {
+  
+}
+
+.bg1 {
   height: 100%;
   /*background-color: #333;*/
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background1.jpg");
   min-height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bg2 {
+  height: 100%;
+  /*background-color: #333;*/
+  background-image: url("../img/background2.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg3 {
+  height: 100%;
+  /*background-color: #333;*/
+  background-image: url("../img/background3.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    body {
+        background-attachment: scroll;
+    }
 }
 body {
   color: #fff;
@@ -173,8 +213,8 @@ body {
   color: #333;
 }
 .page-content{
-  margin-top: 35vh;
-  height: 65vh;
+  margin-top: 30vh;
+  height: 70vh;
 }
 /*.table{
   margin-top: 10%;
@@ -254,7 +294,7 @@ table.table > tbody > tr:hover {
 .table {
   opacity: 0;
   color: #333;
-  background-color: #FFF;
+  background-color: rgba(255, 255, 255, .6);
   text-shadow: none;
 }
 .panel {
