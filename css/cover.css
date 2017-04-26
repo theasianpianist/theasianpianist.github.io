@@ -6,7 +6,7 @@
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #333;
 }
 
 /* Custom default button */
@@ -214,6 +214,7 @@ iframe {
 .text-whitebg {
   color: #333;
   text-shadow: none;
+  text-decoration: none;
 }
 table.table > tbody > tr:hover {
   background-color: rgba(255, 255, 255, .6);
@@ -226,9 +227,19 @@ table.table > tbody > tr:hover {
 .expand{
   transform: rotate(-90deg);
 }
-.main{
-  /*margin-top: 20vh;*/
-}
+/*.main{
+  width: 50%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFF;
+}*/
+/*.backdrop {
+  width: 100vw;
+  height: 100vh;
+  margin-left: 0;
+  background-color: #FFF;
+}*/
 /*.parallax {
   background-image: url("../img/background.jpg");
   min-height: 100%;
@@ -242,7 +253,14 @@ table.table > tbody > tr:hover {
 .panel,
 .table {
   opacity: 0;
+  color: #333;
+  background-color: #FFF;
+  text-shadow: none;
 }
 .panel {
   font-size: 18px;
+}
+
+.table {
+  font-size: 14px;
 }
