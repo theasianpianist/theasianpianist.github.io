@@ -23,10 +23,6 @@ a:hover {
   border: 1px solid #fff;
 }
 
-.cover {
-  font-weight: bold;
-}
-
 
 /*
  * Base structure
@@ -52,6 +48,10 @@ body {
 
 .bg3 {
   background-image: url("../img/background3.png");
+}
+
+.bg4 {
+  background-image: url("../img/background4.png");
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -291,4 +291,16 @@ table.table > tbody > tr:hover {
 
 .table {
   font-size: 14px;
+}
+
+.description {
+  font-weight: normal;
+}
+
+.small-table{
+  font-size: 12px;
+}
+
+.down {
+  font-size: 1.5em;
 }
