@@ -138,14 +138,6 @@ body {
   }
 }
 
-
-/*
- * Cover
- */
-/*
-.cover {
-  padding: 0 20px;
-}*/
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
@@ -204,9 +196,7 @@ body {
   margin-top: 30vh;
   height: 70vh;
 }
-/*.table{
-  margin-top: 10%;
-}*/
+
 .down {
   animation-name: breathe;
   animation-duration: 1.25s;
@@ -255,29 +245,6 @@ table.table > tbody > tr:hover {
 .expand{
   transform: rotate(-90deg);
 }
-/*.main{
-  width: 50%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #FFF;
-}*/
-/*.backdrop {
-  width: 100vw;
-  height: 100vh;
-  margin-left: 0;
-  background-color: #FFF;
-}*/
-/*.parallax {
-  background-image: url("../img/background.jpg");
-  min-height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: auto;
-  margin-left: auto;
-}*/
 .panel,
 .table {
   opacity: 0;
