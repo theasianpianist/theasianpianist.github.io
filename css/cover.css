@@ -271,3 +271,7 @@ table.table > tbody > tr:hover {
 .down {
   font-size: 2em;
 }
+
+.main {
+  margin-bottom: 30vh;
+}
