@@ -178,10 +178,7 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
-  .page-content {
-    margin-top: 30vh;
-    height: 70vh;
-  }
+  
 }
 
 @media (min-width: 992px) {
@@ -190,19 +187,21 @@ body {
   .cover-container {
     width: 700px;
   }
-  .page-content {
-    margin-top: 30vh;
-    height: 70vh;
-  }
 }
 .panel-body{
   text-shadow: none;
   text-align: left;
   color: #333;
 }
-.page-content{
-  margin-top: 10vh;
-  height: 66.6vh;
+.page-content {
+    margin-top: 30vh;
+    height: 70vh;
+}
+@media (max-width: 1080px) {
+  .page-content{
+    margin-top: 10vh;
+    height: 66.6vh;
+  }
 }
 
 .down {
@@ -282,4 +281,7 @@ table.table > tbody > tr.no-pointer:hover {
 
 .down {
   font-size: 2em;
+}
+.mastfoot {
+  color: #000;
 }
