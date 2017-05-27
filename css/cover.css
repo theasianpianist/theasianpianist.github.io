@@ -178,6 +178,9 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+  .page-content {
+    margin-top: 30vh;
+  }
 }
 
 @media (min-width: 992px) {
@@ -186,6 +189,9 @@ body {
   .cover-container {
     width: 700px;
   }
+  .page-content {
+    margin-top: 30vh;
+  }
 }
 .panel-body{
   text-shadow: none;
@@ -193,7 +199,7 @@ body {
   color: #333;
 }
 .page-content{
-  margin-top: 30vh;
+  margin-top: 10vh;
   height: 70vh;
 }
 
