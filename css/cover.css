@@ -180,6 +180,7 @@ body {
   }
   .page-content {
     margin-top: 30vh;
+    height: 70vh;
   }
 }
 
@@ -191,6 +192,7 @@ body {
   }
   .page-content {
     margin-top: 30vh;
+    height: 70vh;
   }
 }
 .panel-body{
@@ -200,7 +202,7 @@ body {
 }
 .page-content{
   margin-top: 10vh;
-  height: 70vh;
+  height: 66.6vh;
 }
 
 .down {
@@ -260,6 +262,7 @@ table.table > tbody > tr.no-pointer:hover {
   color: #333;
   background-color: rgba(255, 255, 255, .7);
   text-shadow: none;
+  margin-bottom: 0px;
 }
 .panel {
   font-size: 18px;
@@ -279,8 +282,4 @@ table.table > tbody > tr.no-pointer:hover {
 
 .down {
   font-size: 2em;
-}
-
-.main {
-  margin-bottom: 30vh;
 }
