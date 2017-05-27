@@ -195,7 +195,7 @@ body {
 }
 .page-content {
     margin-top: 30vh;
-    height: 57  vh;
+    height: 57vh;
 }
 @media (max-width: 1080px) {
   .page-content{
