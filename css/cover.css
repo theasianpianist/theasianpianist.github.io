@@ -54,7 +54,7 @@ body {
   background-image: url("../img/background4.png");
 }
 
-@media only screen and (max-device-width: 1024px) {
+/*@media only screen and (max-device-width: 1024px) {
     body {
         background-attachment: scroll;
         min-height: 100%;
@@ -62,7 +62,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
     }
-}
+}*/
 body {
   color: #fff;
   text-align: center;
