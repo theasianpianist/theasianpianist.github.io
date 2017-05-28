@@ -1,0 +1,247 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link rel="stylesheet" type="text/css" href="/Content/_Reset.css" /><link rel="stylesheet" type="text/css" href="/Content/jquery-ui-1.8.14.custom.css" /><script src="/Content/jquery-1.9.1.min.js" type="text/javascript"></script><script src="/Content/jquery-ui-1.8.14.custom.min.js" type="text/javascript"></script><script src="/Content/Geeks.Scripts.js" type="text/javascript"></script><script src="/Content/Reflection.js" type="text/javascript"></script><script src="/Content/CollapsibleCheckBoxList.js" type="text/javascript"></script><script src="/Content/Geeks.jQuery.Extensions.js" type="text/javascript"></script><title>
+	View your optimized image
+</title><meta http-equiv="Page-Enter" content="blendTrans(Duration=0.1)" />
+    <script src="/Content/Geeks.Scripts.js" type="text/javascript"></script>
+    <link href="../App_Templates/_Reset.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Mazdak.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Standard.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Menu.css" type="text/css" rel="stylesheet" /><link href="../App_Templates/FrontEnd/Template.css" type="text/css" rel="stylesheet" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="View-optimized-image.aspx?id=e54fb7f0-dbeb-455f-8a23-7b982ebce124" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_DefaultScriptManager_HiddenField" id="ctl00_DefaultScriptManager_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNzkzMTUxNTEPZBYCZg9kFgQCAQ9kFgICCA8WAh4HVmlzaWJsZWhkAgMPZBYIAgMPZBYCAgMPZBYMAgEPFgIeBWNsYXNzBQhzZWxlY3RlZBYCAgEPDxYCHgtOYXZpZ2F0ZVVybAUKL0hvbWUuYXNweGRkAgMPFgIfAWUWAgIBDw8WAh8CBQ4vRG93bmxvYWQuYXNweGRkAgUPFgIfAWUWAgIBDw8WAh8CBQsvU2hhcmUuYXNweGRkAgcPFgIfAWUWAgIBDw8WAh8CBQkvRkFRLmFzcHhkZAIJDxYCHwFlFgICAQ8PFgIfAgUQL0NvbnRhY3QtdXMuYXNweGRkAgsPFgIfAGgWAgIBDxYCHwFlFgICAQ8PFgIfAgURL0ludGVncmF0aW9uLmFzcHhkZAIFD2QWBgIBD2QWBAIBDxYCHwFlFgICAQ8PFgIfAgURL0ludGVncmF0aW9uLmFzcHhkZAIDDxYCHwFlFgICAQ8PFgIfAgUcL0ludGVncmF0aW9uL0hvdy10by11c2UuYXNweGRkAgMPZBYCAgEPFgIfAWUWAgIBDw8WAh8CBRcvSW50ZWdyYXRpb24vVHJpYWwuYXNweGRkAgUPZBYGAgEPFgIfAWUWAgIBDw8WAh8CBUgvSW50ZWdyYXRpb24vUHVyY2hhc2UtQVBJLmFzcHg/dHlwZT1hNDk5MDAyNS02YTc2LTRkNDMtOWFjOS0wMjViZWMzOTM4NTFkZAIDDxYCHwFlFgICAQ8PFgIfAgVIL0ludGVncmF0aW9uL1B1cmNoYXNlLUFQSS5hc3B4P3R5cGU9ZjYzMmFlYmQtZGJlYi00MmJkLTg2MDctOTU5MzQyZjdhMTIxZGQCBQ8WAh8BZRYCAgEPDxYCHwIFSC9JbnRlZ3JhdGlvbi9QdXJjaGFzZS1BUEkuYXNweD90eXBlPWJhZWZjMGZmLTQ2NTctNDE1Yy1iMWEzLTAwM2Y1MzJjODZiZWRkAgcPZBYEAgEPZBYCZg8VBwQxMDAzAzY2NwM5NTkFMC4wNjIEMTAwMwM2NjcDNDE0ZAIDD2QWBgIBDw8WAh8CBQovSG9tZS5hc3B4ZGQCAw8PFgIfAgUOL0Rvd25sb2FkLmFzcHhkZAIFDw8WAh8CBQsvU2hhcmUuYXNweGRkAgkPZBYCZg8VAQQyMDE3ZGQM8XlG7pGXoH6eIVpdUay8RYGh2tXMWR3UhaUVX3Z/iw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=ZpjmSoF0HvbFqRrTgjOHLApSh6ibE7U6tHaycIT_QopfH7xFo1lP1rJhjgJM3V6jQb0B7XZr5OFkv5DnWzfrYieB8OIg00TeQSZ83j6NlFs1&amp;t=635589471571259667" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=auSepMMNrqja1foaIhxg6LhxW2XYbJdip0pLrlJ9O_gs_QTCED_kSLEp6Pr9Eu9lSOJASG8KsMC92EQnjHM6FmhrQm4z67Z3j_VRs8YfzQq2YB-DqMoK_Nxkq06cPMMyosGUl2HeBhC-M_xYxL1eQw2&amp;t=7c776dc1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=Wj9e4wh7h08fWKctEqwWXDMNjqVsSLIrjwSbiiwoTtNkR_O004UpfdCxJ_azBN3KbCZmoxX_gczaWjvCVRK9KOHRYWBFf2GTnWBEJn2WMsdDY1HsXxzdd-FGde5zJavStLfLHlD5rNUa2iSw3dFrxw2&amp;t=7c776dc1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="AD4AEA2A" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$DefaultScriptManager', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div class="website-container">
+        
+<div class="banner">
+    <a href="/"><img src="../Images/Banner.jpg" alt="" style="border-width:0px;" /></a><br />
+    
+<!-- «Start| Main menu» -->
+<div class='[#EMPTY#]'>
+  <span class='main-menu'>
+    <span class="selected">
+      <div class="item">
+        <a href="/Home.aspx">
+          Optimize Now!
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/Download.aspx">
+          Download
+        </a>
+      </div>
+    </span>
+    <!--<span class="">
+      <div class="item">
+        <a href="/Share.aspx">
+          Share!
+        </a>
+      </div>
+    </span>-->
+    <span class="">
+      <div class="item">
+        <a href="/FAQ.aspx">
+          FAQ
+        </a>
+      </div>
+    </span>
+    <span class="">
+      <div class="item">
+        <a href="/Contact-us.aspx">
+          Contact us
+        </a>
+      </div>
+    </span>
+    
+  </span>
+</div>
+<!-- «End| Main menu» -->
+</div>
+
+        <div class="body">
+            
+<div class="left-column">
+    
+
+    
+</div>
+
+            
+  <div>
+    
+<!-- «Start| Optimization report» -->
+<h1>
+  Your image is now optimized!
+</h1>
+<div class="optimization-report">
+  <div class="box">
+    <h3>
+      Original Image
+    </h3>
+    <br/>
+    <div class="red">
+      1003 x 667
+      <br/>
+      <b>
+        959
+      </b>
+      KB
+    </div>
+  </div>
+  <div class="box">
+    <center>
+      <br/>
+      <br/>
+      <img alt="arrow" src="/Images/Optimizearrow.gif" />
+      <br/>
+      (Optimized in 0.062 seconds)
+    </center>
+  </div>
+  <div class="box">
+    <h3>
+      Optimized
+    </h3>
+    <br/>
+    <div class="green">
+      1003 x 667
+      <br/>
+      <b>
+        414
+      </b>
+      KB
+    </div>
+    <input type="submit" name="ctl00$Main$ctl00$btnDownloadToYourComputer" value="Download to your computer" id="ctl00_Main_ctl00_btnDownloadToYourComputer" />
+  </div>
+</div>
+<!-- «End| Optimization report» -->
+  </div>
+  <div>
+    
+<!-- «Start| Promote downloading» -->
+<h2>
+  Your image is optimized.
+</h2>
+<p>
+  You can
+  <a id="ctl00_Main_ctl01_btnOptimizeAnother" href="/Home.aspx">optimize another</a>
+  image. Or why not
+  <a id="ctl00_Main_ctl01_btnDownloadImageOptimizer" href="/Download.aspx">Download Image Optimizer</a>
+  , so it runs very fast on your own computer?
+</p>
+<p>
+  Also if you like this free service,
+  <a id="ctl00_Main_ctl01_btnTellYourFriends" href="/Share.aspx">tell your friends</a>
+  about it. Later on, the images they will email yourself will upload and download faster!
+</p>
+<h2>
+  Help us keep it free
+</h2>
+<p>
+  We would love to keep the online Image Optimizer service free, but that will be only possible with your help. Please donate to contribute towards our hosting and maintenance costs.
+</p>
+<div class="rightalign">
+  <iframe src="../donate.aspx" width="180px">
+  </iframe>
+</div>
+<!-- «End| Promote downloading» -->
+  </div>
+
+        </div>
+    </div>
+    
+<div class="footer">
+    <hr />
+    Copyright&nbsp;&copy;&nbsp;2017 ImageOptimizer.Net - All rights reserved<br>
+    A product of Geeks Ltd, <a href="http://www.geeks.ltd.uk/home.html">Software Development
+        company in London</a></div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_DefaultScriptManager_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+</script>
+</form>
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-4013727-4");
+        pageTracker._trackPageview();
+    </script>
+    <!-- Cookie Control -->
+    <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    <script src="/Content/cookieControl-4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">//<![CDATA[
+        cookieControl({
+            introText: "<p>The cookies on this site are essential, and the site won't work as expected without them. These cookies are set when you navigate to the site, submit a form, login or interact with the site.</p>",
+            fullText: "",
+            position: 'left', // left or right
+            shape: 'triangle', // triangle or diamond
+            theme: 'light', // light or dark
+            startOpen: true,
+            autoHide: 6000,
+            subdomains: true,
+            onAccept: function () { }, // NOTE: we don't stop the analytics before user accepts. Instead we advise them to leave if they don't want this.
+            onReady: function () { },
+            onCookiesAllowed: function () { },
+            onCookiesNotAllowed: function () { },
+            countries: 'United Kingdom' // Or supply a list ['United Kingdom', 'Greece']
+        });
+       //]]>
+    </script>
+</body>
+</html>
