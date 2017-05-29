@@ -194,14 +194,9 @@ body {
   color: #333;
 }
 .page-content {
-    margin-top: 30vh;
-    height: 57vh;
-}
-@media (max-width: 1080px) {
-  .page-content{
-    margin-top: 10vh;
-    height: 66.6vh;
-  }
+    margin-top: 0vh;
+    height: 40vh;
+    margin-bottom: 20vh;
 }
 
 .down {
@@ -284,4 +279,7 @@ table.table > tbody > tr.no-pointer:hover {
 }
 .mastfoot {
   color: #000;
+}
+.clearfix {
+  height: 40vh;
 }
