@@ -20,58 +20,51 @@
             ga('send', 'pageview');
         </script>
     </head>
-
     <body>
-      <div class="site-wrapper">
-
-        <div class="site-wrapper-inner">
-
-            <div class="cover-container">
-
-                <div class="clearfix">
-                  <div class="inner">
-                  <div class="navbar">
-                        <a  href="../../"><h3 class="masthead-brand">Lawrence Lee</h3></a>
-                        <nav>
-                          <ul class="nav masthead-nav">
-                              <li><a href="../../">Home</a></li>
-                              <li><a href="../../projects">Projects</a></li>
-                              <li><a href="../../resume">Résumé</a></li>
-                              <li><a href="../../posts">Posts</a></li>
-<!--                               <li><a href="about.html">About</a></li>
- -->                          </ul>
-                        </nav>
-                  </div>
-                  </div>
-              </div>
-              <div class="page-content">
-              <div class="inner cover">
-                  <h1 class="cover-heading">The StackOverlow Search Library</h1>
-                  <p class="lead">May 3, 2017</p>
-                  <div class="down-container">
-                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
-              </div>
-              </div>
-              </div>
-              <div class="main">
-                <div class="text">
-                <p>For many college students, finals week is the most stressful time of the year. Like a large number of my peers, I decided to ease this stress by working on something completely unrelated to finals. (Having written that sentence out, I now see how ridiculous using procrastination as a stress-reliever is). </p>
-                <p>Throughout the year, a select few friends in my CS classes had resorted to asking me and a few other people for help, constantly. I don't mind helping other people out - in fact, it's something that makes me happy. What I do mind, however, is when people ask for help without having tried anything on their own. As a result of this, I decided, tongue-in-cheek, to write  small utility to help them out. I decided to write a Java library that, when implemented properly, would automatically search StackOverflow for any exceptions thrown at runtime.</p>
-                <p>In the first iteration of my project, I decided to simply write a function that could be called in the <code>catch</code> portion of a <code>try/catch</code> block. This was simple enough - the function took the general Java exception as its only parameter, then used the <code>browse</code> capability of the Java Desktop API to open up a new browser tab and search for the exception and its message. As an afterthought, I had the program open up a tab to search Google as well, because (shocking as it may seem), StackOverflow doesn't know everything. </p>
-                <p>The hard part of this project was figuring out how to compile my Java code into a usable JAR file. At first, I used the <code>jar</code> command from the Linux terminal. While it worked, it was pretty tedious. Eventually, I discovered and settled on Apache Maven, a "build automation tool" that provides an easy way to test and package Java projects. After porting my project to use Maven (a trivial matter in IntelliJ, my IDE), building each JAR file was as easy as the click of a button. </p>
-                <p>I'm lazy, so for projects that don't matter I don't test extensively before deployment. (If any potential employers are reading this, I promise that I test incredibly thoroughly when it counts). After giving the library to a friend to play with, we discovered that the messages for some exceptions can contain characters that make StackOverflow throw a fit. Because of this, I was forced to encode the search query I used with the Java URL encoder. I was pretty much good to go after this.</p>
-                <p>Even though it was "working," I still wasn't quite happy with the project. Not every every Java program utilizes <code>try/catch</code> blocks, so there were some cases where this library couldn't be used. To fix this, I decided to implement the <code>UncaughtExceptionHandler</code> interface, which now allows my function to be set as the default exception handler for any Java program - <code>try/catch</code> not needed!</p>
-                <p>Right now, the project doesn't support Linux operating systems (kind of ironic, because I have switched to using Linux full-time) because whoever wrote the Java Desktop API didn't give two hoots about Linux integration. The library will be updated when I can find the motivation to look for and implement a Linux workaround. Until then, Linux users will have to do without (sorry to all 3 of you).</p>
-                <p>You can checkout the finished product <a href="https://www.github.com/theasianpianist/sosl/">here</a>.</p>
-                </div>            
-              </div>
+        <div class="site-wrapper">
+            <div class="site-wrapper-inner">
+                <div class="cover-container">
+                    <div class="clearfix">
+                        <div class="inner">
+                            <div class="navbar">
+                                <a  href="../../"><h3 class="masthead-brand">Lawrence Lee</h3></a>
+                                <nav>
+                                    <ul class="nav masthead-nav">
+                                        <li><a href="../../">Home</a></li>
+                                        <li><a href="../../projects">Projects</a></li>
+                                        <li><a href="../../resume">Résumé</a></li>
+                                        <li><a href="../../posts">Posts</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div class="inner cover">
+                            <h1 class="cover-heading">The StackOverlow Search Library</h1>
+                            <p class="lead">May 3, 2017</p>
+                            <div class="down-container">
+                                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main">
+                        <div class="text">
+                            <p>For many college students, finals week is the most stressful time of the year. Like a large number of my peers, I decided to ease this stress by working on something completely unrelated to finals. (Having written that sentence out, I now see how ridiculous using procrastination as a stress-reliever is). </p>
+                            <p>Throughout the year, a select few friends in my CS classes had resorted to asking me and a few other people for help, constantly. I don't mind helping other people out - in fact, it's something that makes me happy. What I do mind, however, is when people ask for help without having tried anything on their own. As a result of this, I decided, tongue-in-cheek, to write  small utility to help them out. I decided to write a Java library that, when implemented properly, would automatically search StackOverflow for any exceptions thrown at runtime.</p>
+                            <p>In the first iteration of my project, I decided to simply write a function that could be called in the <code>catch</code> portion of a <code>try/catch</code> block. This was simple enough - the function took the general Java exception as its only parameter, then used the <code>browse</code> capability of the Java Desktop API to open up a new browser tab and search for the exception and its message. As an afterthought, I had the program open up a tab to search Google as well, because (shocking as it may seem), StackOverflow doesn't know everything. </p>
+                            <p>The hard part of this project was figuring out how to compile my Java code into a usable JAR file. At first, I used the <code>jar</code> command from the Linux terminal. While it worked, it was pretty tedious. Eventually, I discovered and settled on Apache Maven, a "build automation tool" that provides an easy way to test and package Java projects. After porting my project to use Maven (a trivial matter in IntelliJ, my IDE), building each JAR file was as easy as the click of a button. </p>
+                            <p>I'm lazy, so for projects that don't matter I don't test extensively before deployment. (If any potential employers are reading this, I promise that I test incredibly thoroughly when it counts). After giving the library to a friend to play with, we discovered that the messages for some exceptions can contain characters that make StackOverflow throw a fit. Because of this, I was forced to encode the search query I used with the Java URL encoder. I was pretty much good to go after this.</p>
+                            <p>Even though it was "working," I still wasn't quite happy with the project. Not every every Java program utilizes <code>try/catch</code> blocks, so there were some cases where this library couldn't be used. To fix this, I decided to implement the <code>UncaughtExceptionHandler</code> interface, which now allows my function to be set as the default exception handler for any Java program - <code>try/catch</code> not needed!</p>
+                            <p>Right now, the project doesn't support Linux operating systems (kind of ironic, because I have switched to using Linux full-time) because whoever wrote the Java Desktop API didn't give two hoots about Linux integration. The library will be updated when I can find the motivation to look for and implement a Linux workaround. Until then, Linux users will have to do without (sorry to all 3 of you).</p>
+                            <p>You can checkout the finished product <a href="https://www.github.com/theasianpianist/sosl/">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
-      </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="../../js/bootstrap.min.js"></script>
-      <script src="../../js/scroll.js"></script>
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/scroll.js"></script>
     </body>
 </html>
