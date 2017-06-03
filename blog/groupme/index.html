@@ -1,93 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../img/favicon.ico">
-    <title>Lawrence Lee - Projects and More</title>
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../css/blog.css" rel="stylesheet">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-98272967-1', 'auto');
-      ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <div class="clearfix">
-            <div class="inner">
-              <div class="navbar">
-                <a style="color: #FFF;" href="../../"><h3 class="masthead-brand">Lawrence Lee</h3></a>
-                  <nav>
-                    <ul class="nav masthead-nav">
-                      <li><a href="../../">Home</a></li>
-                      <li><a href="../../projects">Projects</a></li>
-                      <li><a href="../../resume">Résumé</a></li>
-                      <li><a href="../../posts">Posts</a></li>
-                    </ul>
-                  </nav>
-              </div>
-            </div>
-          </div>
-          <div class="page-content">
-            <div class="inner cover">
-              <h1 class="cover-heading">Creating a GroupMe Chatbot</h1>
-              <p class="lead">May 10, 2017</p>
-              <div class="down-container">
-                <span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
-              </div>
-            </div>
-          </div>
-          <div class="main">
-            <div class="text">
-              <p>Some of my friends have very weird ways of texting. This has come up multiple times in a groupchat that we're all in. In particular, one of my friends tends to type "you" as "yu," something which I put up with (because we're friends) but still annoys me a tiny bit. After coming home from college for the summer and sitting around my house bored for a day, I decided to write an auto-correct bot for my friend in the GroupChat.</p>  
-              <p>Before this project, I knew very little about hosting things online (aside from maintaining this website). Thus, Google was my first stop. I settled on using Heroku to host my bot because that's the service used by the <a href="http://www.apnorton.com/blog/2017/02/28/How-I-wrote-a-Groupme-Chatbot-in-24-hours/">tutorial</a> I followed (lame, right?). Anyways, after running through the setup for my Heroku account and setting the hosting configurations, got to work coding the bot itself. </p>
-              <p>I decided to write the bot in Python because (surprise) it's the language used by the tutorial, which helpfully provided some starter code. (I also do happen to know Python at a decent level, so that didn't hurt). I could have decided on another language, but that would have meant re-writing the interface code provided by the tutorial, something I didn't really want to spend time on so that I could get to the fun stuff. </p>
-              <p>After figuring out how to get chat data from GroupMe, I set about to actually processing it and returing the appropriate text. Everytime my friend (or anyone else in the chat) sent one of her idiosyncratic words in the chat, my goal was to simply have the bot repeat the message, replacing the "fake" words for their English counterparts. So a message that read:</p>
-              <div class="center">
-                <i>How are yu doing?</i>
-              </div>
-              <p>would be sent back into the chat as:</p>
-              <div class="center">
-                <i>How are you doing?</i>
-              </div>
-              <p>My first thought when approaching this was to simply split each message by spaces, then search through the resulting list for "yu". However, I quickly realized that this method would be very spotty, simply because my friend has a tendency to repeat the last letter of her words several times, leading to messages like:</p>
-              <div class="center">
-                <i>I didn't know it was yuuuuuuuuu!!</i>
-              </div>
-              <p>Ideally, this message would be corrected to:</p>
-              <div class="center">
-                <i>I didn't know it was youuuuuuuuu!!</i>
-              </div>
-              <p>which wouldn't have happened with my original idea. After some searching, I stumbled upon Python's <a href="https://docs.python.org/2/library/re.html">regular expressions module</a> which provided a very convienient way for me to scan through each chat message and look for occurences of "yu". All the occurences would then be stored in a list with this code:</p>
-              <div class="center">
-                <code>locations = [m.start() for m in re.finditer('yu', messageText)]</code>
-              </div>
-              <p></p>
-              <p>After creating the list, I simply needed to iterate through the list, replacing each occurence of "yu" with "you." Simple, right? Not so much. To start, it turns out I needed to iterate through the list backwards. Because "yu" and "you" are differ in length by 1, replacing while going forwards meant that all the locations stored in the list were thrown off by one each time I replaced a word. Replacing backwards ensured that all the locations stored in the list would still be valid when it came time to replace them.</p>
-              <p>Another issue I discovered was that sometimes, the letters "yu" occur in actual English words. If I were to replace "yu" with "you" blindly anytime it occurred, then words like "layup" woul be corrected to "layoup," an obvious error. To solve this, I ended up writing my own replacement function instead of using the one provided by Python. Inside this function, I replaced "yu" with "you" if the preceding character was a space or if the "yu" occurred at the very beginning of the string. This does leave the issue of what would happen if another word started with "yu," but I decided to leave that issue for another time as solving that would be much more intensive (at least the way I plan to do it which involves dictionary detection and potentially porting this project over to Java so I can make use the Apache Lucene library). </p>
-              <p>After some more digging, I also discovered that the regular expression module allowed for case-insensitive searches, which meant that I didn't have to have separate cases for different case combinations (e.g. accounting separately for "yu", "Yu", and "YU"). Using this also meant that I had to almost completely rewrite my replacement function. The function now iterates through the original message letter by letter, checking the case of each letter as it goes and replacing it with the corresponding letter in the replacement word with matching case. In cases where the replacement word is longer than the original, I simply determine the case for the extra letters based off the last letter of the original word. Now, "YU" corrects to "YOU" (but in many fewer lines of code), but "yU" also inadverdently corrects to "yOU." I figured that "yU" was enough of an edge case where I could safely ignore it - how often do you capitalize the last letter but not the first of a word?</p>
-              <p>After finalizing the logic for this case ("yu" to "you"), I simply had to apply it to all the other weird things that my friends type. With everything done, I pushed the final build to Heroku, and watched as my friends in the chat (who all happen to be computer science majors) tried to break it and test its robustness. One of them even tried SQL injection (fortunately for me, no SQL was used in the making of this bot). Though after all I've gone through, maybe I'll just create an auto-correct entry on my friend's phone to fix the problem at the source</p>
-              <p>Check out the not so finished product <a href="https://github.com/theasianpianist/groupme-translator">here</a>!</p>
-              <p><i>Update: May 11, 2017</i></p>
-              <p>I've reworked the code a bit. After being relentlessly mocked in my groupchat (not reall) in my groupchat about my bot's inability to distnguish "yu" from "yukon," I decided to implement some logic to scan the end of the trigger string instead of just the beginning. To deal with real English words that may begin with a trigger string, the word replacement function checks to see if the character at the end of the trigger string is either a space or the same character as the last character in the trigger string. I also compacted some of my code into a for loop, reducing its overall spaghetti-ness.</p>
-            </div>            
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/scroll.js"></script>
-  </body>
+  	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../img/favicon.ico">
+		<title>Lawrence Lee - Projects and More</title>
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+		<link href="../../css/blog.css" rel="stylesheet">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-98272967-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+  	</head>
+  	<body>
+  		<div class="site-wrapper">
+    		<div class="site-wrapper-inner">
+      			<div class="cover-container">
+					<div class="clearfix">
+          				<div class="inner">
+            				<div class="navbar">
+              					<a style="color: #FFF;" href="../../">
+                				<h3 class="masthead-brand">Lawrence Lee</h3>
+              					</a>
+              					<nav>
+									<ul class="nav masthead-nav">
+										<li><a href="../../">Home</a></li>
+										<li><a href="../../projects">Projects</a></li>
+										<li><a href="../../resume">Résumé</a></li>
+										<li><a href="../../posts">Posts</a></li>
+									</ul>
+              					</nav>
+            				</div>
+          				</div>
+        			</div>
+        			<div class="page-content">
+          				<div class="inner cover">
+            				<h1 class="cover-heading">Creating a GroupMe Chatbot</h1>
+            				<p class="lead">May 10, 2017</p>
+            				<div class="down-container">
+              					<span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
+            				</div>
+          				</div>
+        			</div>
+        			<div class="main">
+          				<div class="text">
+            				<p>Some of my friends have very weird ways of texting. This has come up multiple times in a groupchat that we're all in. In particular, one of my friends tends to type "you" as "yu," something which I put up with (because we're friends) but still annoys me a tiny bit. After coming home from college for the summer and sitting around my house bored for a day, I decided to write an auto-correct bot for my friend in the GroupChat.</p>
+            				<p>Before this project, I knew very little about hosting things online (aside from maintaining this website). Thus, Google was my first stop. I settled on using Heroku to host my bot because that's the service used by the <a href="http://www.apnorton.com/blog/2017/02/28/How-I-wrote-a-Groupme-Chatbot-in-24-hours/">tutorial</a> I followed (lame, right?). Anyways, after running through the setup for my Heroku account and setting the hosting configurations, got to work coding the bot itself. </p>
+            				<p>I decided to write the bot in Python because (surprise) it's the language used by the tutorial, which helpfully provided some starter code. (I also do happen to know Python at a decent level, so that didn't hurt). I could have decided on another language, but that would have meant re-writing the interface code provided by the tutorial, something I didn't really want to spend time on so that I could get to the fun stuff. </p>
+            				<p>After figuring out how to get chat data from GroupMe, I set about to actually processing it and returing the appropriate text. Everytime my friend (or anyone else in the chat) sent one of her idiosyncratic words in the chat, my goal was to simply have the bot repeat the message, replacing the "fake" words for their English counterparts. So a message that read:</p>
+            				<div class="center">
+              					<i>How are yu doing?</i>
+            				</div>
+            				<p>would be sent back into the chat as:</p>
+            				<div class="center">
+              					<i>How are you doing?</i>
+            				</div>
+            				<p>My first thought when approaching this was to simply split each message by spaces, then search through the resulting list for "yu". However, I quickly realized that this method would be very spotty, simply because my friend has a tendency to repeat the last letter of her words several times, leading to messages like:</p>
+            				<div class="center">
+              					<i>I didn't know it was yuuuuuuuuu!!</i>
+            				</div>
+            				<p>Ideally, this message would be corrected to:</p>
+            				<div class="center">
+              					<i>I didn't know it was youuuuuuuuu!!</i>
+            				</div>
+            				<p>which wouldn't have happened with my original idea. After some searching, I stumbled upon Python's <a href="https://docs.python.org/2/library/re.html">regular expressions module</a> which provided a very convienient way for me to scan through each chat message and look for occurences of "yu". All the occurences would then be stored in a list with this code:</p>
+            				<div class="center">
+              					<code>locations = [m.start() for m in re.finditer('yu', messageText)]</code>
+            				</div>
+            				<p></p>
+            				<p>After creating the list, I simply needed to iterate through the list, replacing each occurence of "yu" with "you." Simple, right? Not so much. To start, it turns out I needed to iterate through the list backwards. Because "yu" and "you" are differ in length by 1, replacing while going forwards meant that all the locations stored in the list were thrown off by one each time I replaced a word. Replacing backwards ensured that all the locations stored in the list would still be valid when it came time to replace them.</p>
+            				<p>Another issue I discovered was that sometimes, the letters "yu" occur in actual English words. If I were to replace "yu" with "you" blindly anytime it occurred, then words like "layup" woul be corrected to "layoup," an obvious error. To solve this, I ended up writing my own replacement function instead of using the one provided by Python. Inside this function, I replaced "yu" with "you" if the preceding character was a space or if the "yu" occurred at the very beginning of the string. This does leave the issue of what would happen if another word started with "yu," but I decided to leave that issue for another time as solving that would be much more intensive (at least the way I plan to do it which involves dictionary detection and potentially porting this project over to Java so I can make use the Apache Lucene library). </p>
+            				<p>After some more digging, I also discovered that the regular expression module allowed for case-insensitive searches, which meant that I didn't have to have separate cases for different case combinations (e.g. accounting separately for "yu", "Yu", and "YU"). Using this also meant that I had to almost completely rewrite my replacement function. The function now iterates through the original message letter by letter, checking the case of each letter as it goes and replacing it with the corresponding letter in the replacement word with matching case. In cases where the replacement word is longer than the original, I simply determine the case for the extra letters based off the last letter of the original word. Now, "YU" corrects to "YOU" (but in many fewer lines of code), but "yU" also inadverdently corrects to "yOU." I figured that "yU" was enough of an edge case where I could safely ignore it - how often do you capitalize the last letter but not the first of a word?</p>
+            				<p>After finalizing the logic for this case ("yu" to "you"), I simply had to apply it to all the other weird things that my friends type. With everything done, I pushed the final build to Heroku, and watched as my friends in the chat (who all happen to be computer science majors) tried to break it and test its robustness. One of them even tried SQL injection (fortunately for me, no SQL was used in the making of this bot). Though after all I've gone through, maybe I'll just create an auto-correct entry on my friend's phone to fix the problem at the source</p>
+            				<p>Check out the not so finished product <a href="https://github.com/theasianpianist/groupme-translator">here</a>!</p>
+            				<p><i>Update: May 11, 2017</i></p>
+            				<p>I've reworked the code a bit. After being relentlessly mocked in my groupchat (not reall) in my groupchat about my bot's inability to distnguish "yu" from "yukon," I decided to implement some logic to scan the end of the trigger string instead of just the beginning. To deal with real English words that may begin with a trigger string, the word replacement function checks to see if the character at the end of the trigger string is either a space or the same character as the last character in the trigger string. I also compacted some of my code into a for loop, reducing its overall spaghetti-ness.</p>
+          				</div>
+        			</div>
+      			</div>
+    		</div>
+  		</div>
+  		<script src="../../js/jquery.min.js"></script>
+  		<script src="../../js/bootstrap.min.js"></script>
+  		<script src="../../js/scroll.js"></script>
+  	</body>
 </html>
