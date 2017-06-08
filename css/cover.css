@@ -178,6 +178,10 @@ body {
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
+    .table-title {
+        white-space: nowrap;
+        overflow: hidden;
+    }
   
 }
 
@@ -227,10 +231,7 @@ iframe {
   width: 90%;
   height: 90%;
 }
-.table-title {
-  white-space: nowrap;
-  overflow: hidden;
-}
+
 .text-whitebg {
   color: #333;
   text-shadow: none;
