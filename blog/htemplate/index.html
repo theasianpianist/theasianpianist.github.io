@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../img/favicon.ico">
+	<title>Lawrence Lee - Projects and More</title>
+	<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../css/blog.css" rel="stylesheet">
+	<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-98272967-1', 'auto');
+        ga('send', 'pageview');
+	</script>
+</head>
+<body>
+<div class="site-wrapper">
+	<div class="site-wrapper-inner">
+		<div class="cover-container">
+			<div class="clearfix">
+				<div class="inner">
+					<div class="navbar">
+						<a  href="../../"><h3 class="masthead-brand">Lawrence Lee</h3></a>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li><a href="../../">Home</a></li>
+								<li><a href="../../projects">Projects</a></li>
+								<li><a href="../../resume">Résumé</a></li>
+								<li><a href="../../posts">Posts</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="page-content">
+				<div class="inner cover">
+					<h1 class="cover-heading">Building an HTML Templating Tool</h1>
+					<p class="lead">June 15, 2017</p>
+					<div class="down-container">
+						<span class="glyphicon glyphicon-menu-down down" aria-hidden="true"></span>
+					</div>
+				</div>
+			</div>
+			<div class="main">
+				<div class="text">
+					<p>I've been maintaining this website pretty much all by hand. It can get pretty tiring and annoying after a bit, especially when I need to make changes across every single page (relax, I'm not in-lining CSS, just making some layout changes in HTML). This got tiring after a while, and I wanted a way to make the task less burdensome. While I'm sure there are services out there that allow you to build multiple web pages from a standard layout, I figured writing my own wouldn't be too difficult and would be a good way to keep my programming skills fresh. Thus, HTemplate was born.</p>
+					<p>In addition to keeping my coding skills sharp, I also wanted to use this project as an opportunity to learn a bit more about <a href="https://maven.apache.org/">Apache Maven</a>, an incredibly popular build-automation tool for Java (and some other languages too). More specifically, I wanted to work with the testing feature provided by Maven. I've never written unit tests of any kind before, so if you decided to look through my code you'll probably find that my unit tests are rather lacking. Hopefully that won't be the case next time. </p>
+					<p>Right from the get-go, I knew that I wanted to use a marker system for this project, i.e. I'd have specific marking text in the template marking where custom HTML was supposed to go, and marking text in each of the content files to match up custom HTML with the template. Thankfully Java provides a great method to search within strings, the <code>indexOf()</code> method. Using this, I would simply find the locations of each marker in the template and then replace it with the corresponding custom HTML in a content file.</code></p>
+					<p>Unit testing on this project turned out to be incredibly helpful, simply because I didn't have to type out long file paths everytime I wanted to test my program. Hopefully I'll get to explore some of the more powerful uses of unit tests in the near future.</p>
+					<p>Because of the way I setup my file detection, the original version only worked if all your content files were in the same directory. Nested folders would simply be skipped over. I thought that implementing support for this would be difficult, but it turned out to be as simple as recursively calling the function that did all the heavy lifting, but with the subfolder instead of the root directory. Now that this project is actually somewhat useful, I'm going to begin the task of migrating this website over so that I can use HTemplate to maintain it. </p>
+					<p>If you'd like to use HTemplate for your own site or simply just check it out, click <a href="https://github.com/theasianpianist/htemplate">here</a>.</a> </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/scroll.js"></script>
+</body>
+</html>
