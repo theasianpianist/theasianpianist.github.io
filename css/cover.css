@@ -284,3 +284,6 @@ table.table > tbody > tr.no-pointer:hover {
 .clearfix {
   height: 40vh;
 }
+td {
+  text-align: left;
+}
