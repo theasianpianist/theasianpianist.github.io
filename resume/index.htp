@@ -1,0 +1,42 @@
+***HTEMPLATE***
+class="bg3"
+***HTEMPLATE***
+<li><a href="../">Home</a></li>
+<li><a href="../projects">Projects</a></li>
+<li class="active"><a href=".">Résumé</a></li>
+<li><a href="../posts">Posts</a></li>
+***HTEMPLATE***
+Here's why I'm qualified
+***HTEMPLATE***
+Please give me a job
+***HTEMPLATE***
+<h2>Work History</h2>
+<ul class="list-group">
+	<li class="list-group-item">Lockheed Martin</li>
+	<li class="list-group-item">DATA Laboratory</li>
+</ul>
+<h2>Technical Skills</h2>
+<ul class="list-group">
+	<li class="list-group-item">Java</li>
+	<li class="list-group-item">Apache Maven</li>
+	<li class="list-group-item">Python</li>
+	<li class="list-group-item">SQL</li>
+	<li class="list-group-item">C++</li>
+</ul>
+<h2>Multimedia Skills</h2>
+<ul class="list-group">
+	<li class="list-group-item">Adobe Premiere</li>
+	<li class="list-group-item">Adobe After Effects</li>
+	<li class="list-group-item">Adobe Photoshop</li>
+	<li class="list-group-item">LaTeX</li>
+</ul>
+<H2>Coursework</H2>
+<ul class="list-group">
+	<li class="list-group-item">Object Oriented Programming - Web Focused</li>
+	<li class="list-group-item">Intermediate Programming</li>
+	<li class="list-group-item">Discrete Mathematics for Computer Science</li>
+	<li class="list-group-item">Introduction to Probability and Stochastic Processing for Engineering</li>
+</ul>
+<a href="docs/Resume_Lee.pdf">View my full résumé</a>
+<br>
+<p></p>
