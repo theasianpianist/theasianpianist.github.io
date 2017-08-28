@@ -38,6 +38,10 @@ body {
   background-size: cover;
 }
 
+.main {
+  margin-bottom: 30%;
+}
+
 .bg1 {
   background-image: url("../img/background1.png");
 }
