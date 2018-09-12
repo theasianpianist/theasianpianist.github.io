@@ -9,6 +9,10 @@ a:hover {
   color: #333;
 }
 
+* {
+    font-family:"Open Sans", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 
 /* Custom default button */
 .btn-default,
