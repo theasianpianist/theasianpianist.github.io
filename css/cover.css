@@ -292,3 +292,7 @@ table.table > tbody > tr.no-pointer:hover {
 td {
   text-align: left;
 }
+
+.fab-container {
+  text-align: center;
+}
