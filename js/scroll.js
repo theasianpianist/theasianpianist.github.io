@@ -20,6 +20,14 @@ $(document).ready(function(){
 
 });
 
+$(document).ready(function(){
+    $(".navbar").css("opacity", 1 - $(window).scrollTop() / 200);
+    $(".panel").css("opacity", $(window).scrollTop() / 200);
+    $(".table").css("opacity", $(window).scrollTop() / 200);
+    $(".down-container, .page-content").css("opacity", 1 - $(window).scrollTop() / 200);
+});
+
+
 $(".no-propogate").click( function(f) {
 });
 

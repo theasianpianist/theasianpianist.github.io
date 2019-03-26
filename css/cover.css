@@ -10,8 +10,9 @@ a:hover {
 }
 
 * {
-  font-family: Georgia;
+    font-family:"Open Sans", "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 
 /* Custom default button */
 .btn-default,
@@ -290,4 +291,8 @@ table.table > tbody > tr.no-pointer:hover {
 }
 td {
   text-align: left;
+}
+
+.fab-container {
+  text-align: center;
 }
